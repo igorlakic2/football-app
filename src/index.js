@@ -1,4 +1,3 @@
-import generateJoke from "./generateJoke";
+import "./styles/main.scss";
 
-console.log(generateJoke());
-console.log("test");
+console.log("test webpack");
