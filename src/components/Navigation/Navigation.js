@@ -7,7 +7,7 @@ const Navigation = () => {
     <nav>
       <ul>
         <li>
-          <Link to="/countries">Countries</Link>
+          <Link to="/teams">Teams</Link>
         </li>
         <li>
           <Link to="/leagues">Leagues</Link>
