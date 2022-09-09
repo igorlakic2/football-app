@@ -2,7 +2,7 @@ import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import "./index.css";
 import Navigation from "./components/Navigation/Navigation";
-import Countries from "./pages/Countries";
+import Teams from "./pages/Teams";
 import Home from "./pages/Home";
 import Leagues from "./pages/Leagues";
 import Players from "./pages/Players";
@@ -15,7 +15,7 @@ function App() {
         <Navigation />
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/countries" element={<Countries />} />
+          <Route path="/teams" element={<Teams />} />
           <Route path="/leagues" element={<Leagues />} />
           <Route path="/players" element={<Players />} />
         </Routes>
