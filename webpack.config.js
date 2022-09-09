@@ -1,5 +1,6 @@
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const path = require("path");
+const Dotenv = require("dotenv-webpack");
 // const BundleAnalyzerPlugin =
 //   require("webpack-bundle-analyzer").BundleAnalyzerPlugin;
 
@@ -26,7 +27,7 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.scss$/,
+        test: /\.(scss|css)$/,
         use: ["style-loader", "css-loader", "sass-loader"],
       },
       {
@@ -51,6 +52,7 @@ module.exports = {
       filename: "index.html",
       template: "src/template.html",
     }),
+    new Dotenv(),
     // new BundleAnalyzerPlugin(),
   ],
 };

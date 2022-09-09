@@ -1,25 +1,25 @@
-// import { BrowserRouter, Routes, Route } from "react-router-dom";
-// import About from "./pages/About";
-// import Contact from "./pages/Contact";
-// import Home from "./pages/Home";
-// import Products from "./pages/Products/Products";
-// import Header from "./components/Header/Header";
-// import SingleProduct from "./pages/Products/SingleProduct";
+import React from "react";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import "./index.css";
+import Navigation from "./components/Navigation/Navigation";
+import Countries from "./pages/Countries";
+import Home from "./pages/Home";
+import Leagues from "./pages/Leagues";
+import Players from "./pages/Players";
 
 function App() {
   return (
     <div className="App">
-      <h1>Football APP.JS</h1>
-      {/* <BrowserRouter>
-        <Header />
+      <h1>Football APP</h1>
+      <BrowserRouter>
+        <Navigation />
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/o-nama" element={<About />} />
-          <Route path="/web-izlog" element={<Products />} />
-          <Route path="/kontakt" element={<Contact />} />
-          <Route path="/web-izlog/:name/:id" element={<SingleProduct />} />
+          <Route path="/countries" element={<Countries />} />
+          <Route path="/leagues" element={<Leagues />} />
+          <Route path="/players" element={<Players />} />
         </Routes>
-      </BrowserRouter> */}
+      </BrowserRouter>
     </div>
   );
 }
