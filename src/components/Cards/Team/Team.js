@@ -8,7 +8,6 @@ const TeamCardDiv = styled.div`
   text-align: center;
   margin: 10px;
   cursor: pointer;
-  //   height: 300px;
 `;
 
 const Team = ({ logo, name }) => {

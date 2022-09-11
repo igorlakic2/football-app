@@ -1,10 +1,9 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-import TextField from "@mui/material/TextField";
-import Autocomplete from "@mui/material/Autocomplete";
 import styled from "styled-components";
-import Team from "../components/Team/Team";
+import Team from "../components/Cards/Team/Team";
 import SimpleModal from "../components/Modal/Modal";
+import CountriesAutocomplete from "../components/CountriesAutocomplete";
 
 const TeamsDiv = styled.div`
   display: flex;
@@ -58,15 +57,9 @@ const Teams = () => {
 
   return (
     <div style={{ padding: 20 }}>
-      <Autocomplete
-        disablePortal
-        id="combo-box-demo"
-        options={countries}
-        sx={{ width: 300 }}
-        renderInput={(params) => <TextField {...params} label="Country" />}
-        getOptionLabel={(option) => option.name}
-        onChange={(event, value) => getTeamsByCountry(value)}
-        onClose={() => setTeams([])}
+      <CountriesAutocomplete
+        countries={countries}
+        onChange={getTeamsByCountry}
       />
       <TeamsDiv>
         {teams.map((team) => (
