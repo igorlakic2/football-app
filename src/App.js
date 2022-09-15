@@ -20,6 +20,7 @@ function App() {
           <Route path="/leagues" element={<Leagues />} />
           <Route path="/players" element={<Players />} />
           <Route path="/single-team/:name" element={<SingleTeam />} />
+          <Route path="/single-player/:id" element={<SingleTeam />} />
         </Routes>
       </BrowserRouter>
     </div>
