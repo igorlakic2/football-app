@@ -7,11 +7,11 @@ import { Typography } from "@mui/material";
 //   return `${value}°C`;
 // }
 
-export default function RangeSlider() {
+export default function RangeSlider({ ages, setAges }) {
   const [value, setValue] = useState([20, 37]);
 
   const handleChange = (event, newValue) => {
-    setValue(newValue);
+    setAges(newValue);
   };
 
   return (
@@ -24,7 +24,7 @@ export default function RangeSlider() {
         step={1}
         max={40}
         getAriaLabel={() => "Temperature range"}
-        value={value}
+        value={ages}
         onChange={handleChange}
         valueLabelDisplay="auto"
         // getAriaValueText={valuetext}

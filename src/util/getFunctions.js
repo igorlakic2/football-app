@@ -34,3 +34,17 @@ export const getTeamsByCountry = async (country, setLoad, setTeams) => {
     console.log(error);
   }
 };
+
+export const getPlayers = async (countryId, ages, setPlayers, setLoad) => {
+  try {
+    setLoad(true);
+    const { data } = await axios.get(
+      `https://app.sportdataapi.com/api/v1/soccer/players?apikey=${process.env.REACT_APP_API_KEY}&country_id=${countryId}&min_age=${ages[0]}&max_age=${ages[1]}`
+    );
+    console.log(data.data);
+    setPlayers(data.data);
+    setLoad(false);
+  } catch (error) {
+    console.log(error);
+  }
+};
