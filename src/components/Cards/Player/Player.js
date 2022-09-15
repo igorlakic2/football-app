@@ -2,7 +2,7 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 import styled from "styled-components";
 
-const TeamCardDiv = styled.div`
+const PlayerCardDiv = styled.div`
   border: 2px solid black;
   width: 150px;
   padding: 15px;
@@ -11,15 +11,16 @@ const TeamCardDiv = styled.div`
   cursor: pointer;
 `;
 
-const Team = ({ logo, name }) => {
+const Player = ({ firstName, lastName, player_id }) => {
   const navigate = useNavigate();
 
   return (
-    <TeamCardDiv onClick={() => navigate(`/single-team/${name}`)}>
-      <img src={logo} alt={name} />
-      <p>{name}</p>
-    </TeamCardDiv>
+    <PlayerCardDiv onClick={() => navigate(`/single-player/${player_id}`)}>
+      <p>
+        {firstName} {lastName}
+      </p>
+    </PlayerCardDiv>
   );
 };
 
-export default Team;
+export default Player;
