@@ -1,4 +1,5 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import styled from "styled-components";
 
 const TeamCardDiv = styled.div`
@@ -11,8 +12,10 @@ const TeamCardDiv = styled.div`
 `;
 
 const Team = ({ logo, name }) => {
+  const navigate = useNavigate();
+
   return (
-    <TeamCardDiv>
+    <TeamCardDiv onClick={() => navigate(`/single-team/${name}`)}>
       <img src={logo} alt={name} />
       <p>{name}</p>
     </TeamCardDiv>
