@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from "react";
 import styled from "styled-components";
-import Player from "../components/Cards/Player/Player";
 
-import CountriesAutocomplete from "../components/CountriesAutocomplete";
+import CountriesAutocomplete from "../components/FormsUI/CountriesAutocomplete/CountriesAutocomplete";
 import SimpleModal from "../components/Modal/Modal";
-import RangeSlider from "../components/RangeSlider/RangeSlider";
+import RangeSlider from "../components/FormsUI/RangeSlider/RangeSlider";
 import { getCountries, getPlayers } from "../util/getFunctions";
+import BasicTable from "../components/Table/Table";
 
 const PlayersDiv = styled.div`
   display: flex;
@@ -52,14 +52,12 @@ const Players = () => {
         <RangeSlider setAges={setAges} ages={ages} />
       </FiltersDiv>
       <PlayersDiv>
-        {players.map((player) => (
-          <Player
-            firstName={player.firstname}
-            lastName={player.lastname}
-            key={player.player_id}
-            player_id={player.player_id}
-          />
-        ))}
+        <BasicTable
+          headers={["First name", "Last name", "Date of birth"]}
+          data={players}
+          // cells={players?.length > 0 ? Object.keys(players[0]) : []}
+          cells={["firstname", "lastname", "birthday"]}
+        />
       </PlayersDiv>
       {load && <SimpleModal />}
     </div>

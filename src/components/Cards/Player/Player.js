@@ -1,3 +1,4 @@
+import moment from "moment/moment";
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import styled from "styled-components";
@@ -11,7 +12,7 @@ const PlayerCardDiv = styled.div`
   cursor: pointer;
 `;
 
-const Player = ({ firstName, lastName, player_id }) => {
+const Player = ({ firstName, lastName, player_id, date }) => {
   const navigate = useNavigate();
 
   return (
@@ -19,6 +20,7 @@ const Player = ({ firstName, lastName, player_id }) => {
       <p>
         {firstName} {lastName}
       </p>
+      <p>{moment(date).format("MMMM Do YYYY")}</p>
     </PlayerCardDiv>
   );
 };
