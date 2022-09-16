@@ -3,7 +3,7 @@ import axios from "axios";
 import styled from "styled-components";
 import Team from "../components/Cards/Team/Team";
 import SimpleModal from "../components/Modal/Modal";
-import CountriesAutocomplete from "../components/CountriesAutocomplete";
+import CountriesAutocomplete from "../components/FormsUI/CountriesAutocomplete/CountriesAutocomplete";
 import { getCountries, getTeamsByCountry } from "../util/getFunctions";
 
 const TeamsDiv = styled.div`
