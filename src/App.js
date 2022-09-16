@@ -7,6 +7,7 @@ import Home from "./pages/Home";
 import Leagues from "./pages/Leagues";
 import Players from "./pages/Players";
 import SingleTeam from "./pages/SingleTeam";
+import SinglePlayer from "./pages/SinglePlayer";
 
 function App() {
   return (
@@ -20,7 +21,7 @@ function App() {
           <Route path="/leagues" element={<Leagues />} />
           <Route path="/players" element={<Players />} />
           <Route path="/single-team/:name" element={<SingleTeam />} />
-          <Route path="/single-player/:id" element={<SingleTeam />} />
+          <Route path="/single-player/:id" element={<SinglePlayer />} />
         </Routes>
       </BrowserRouter>
     </div>
