@@ -25,7 +25,8 @@ export default function BasicTable({ headers, cells, data }) {
             <TableRow
               key={id}
               sx={{ "&:last-child td, &:last-child th": { border: 0 } }}
-              onClick={() => navigate(`/single-team/${row.player_id}`)}
+              onClick={() => navigate(`/single-player/${row.player_id}`)}
+              style={{ cursor: "pointer" }}
             >
               {cells.map((cell, id) => (
                 <TableCell key={id}>{row[cell]}</TableCell>
